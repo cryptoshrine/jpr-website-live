@@ -1,0 +1,43 @@
+/* Button styling to match the previous anchor tag styling */
+
+button.cta-button,
+button.secondary-button {
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0.75rem 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+button.cta-button {
+    background-color: var(--accent-color);
+    color: var(--white);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+button.cta-button:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button.secondary-button {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+button.secondary-button:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

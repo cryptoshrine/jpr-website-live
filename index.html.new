@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<div data-component="head"></div>
+<body>
+    <div data-component="header"></div>
+    <div data-component="mobile-nav"></div>
+    <div data-component="hero"></div>
+    <div data-component="services"></div>
+    <div data-component="why-choose-us"></div>
+    <div data-component="gallery"></div>
+    <div data-component="process"></div>
+    <div data-component="testimonials"></div>
+    <div data-component="about"></div>
+    <div data-component="sponsorship"></div>
+    <div data-component="funding"></div>
+    <div data-component="contact"></div>
+    <div data-component="footer"></div>
+    <div data-component="chatbot"></div>
+    <div data-component="cookies"></div>
+    
+    <!-- Component loader -->
+    <script src="js/component-loader.js"></script>
+    
+    <!-- Main scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/enhanced-chatbot.js"></script>
+</body>
+</html>

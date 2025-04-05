@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - JPR Roofing Solutions Ltd</title>
+    <meta name="description" content="Contact JPR Roofing Solutions Ltd for your roofing needs. Get a free quote for roof repairs, installations, and replacements in London and surrounding areas.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo.png" type="image/png">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/button-fix.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Fix for GitHub Pages URL protocol handling -->
+    <script>
+    // This script runs immediately to fix the protocol handling issue
+    (function() {
+        // Define a global variable to indicate this fix is active
+        window.protocolFixActive = true;
+        
+        // Override the default navigation behavior
+        document.addEventListener('click', function(event) {
+            // Find if the click was on a link or inside a link
+            let target = event.target;
+            while (target && target !== document) {
+                if (target.tagName && target.tagName.toLowerCase() === 'a') {
+                    const href = target.getAttribute('href');
+                    
+                    // Skip links that should work normally
+                    if (!href || href.startsWith('#') || href.startsWith('tel:') || 
+                        href.startsWith('mailto:') || 
+                        (href.startsWith('http') && !href.includes('cryptoshrine.github.io'))) {
+                        return;
+                    }
+                    
+                    // Handle index.html specifically
+                    if (href.includes('index.html') || href === './' || href === '/') {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        window.location = window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/') + '/index.html';
+                        return false;
+                    }
+                    
+                    // Handle other internal links on GitHub Pages
+                    if (!href.startsWith('http')) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        window.location = window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/') + '/' + href;
+                        return false;
+                    }
+                    
+                    break;
+                }
+                target = target.parentNode;
+            }
+        }, true); // Use capturing phase to intercept before other handlers
+    })();
+    </script>
+    
+    <!-- Logo Error Handling -->
+    <script>
+    window.addEventListener('DOMContentLoaded', function() {
+        // Add error handling for logo images
+        const logoImages = document.querySelectorAll('.logo img, .mobile-logo img, .new-footer-logo img');
+        
+        logoImages.forEach(img => {
+            img.onerror = function() {
+                console.error('Error loading logo image:', img.src);
+                // Fallback to a base64 encoded simple text version if image fails to load
+                img.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgNjAiPjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iNjAiIGZpbGw9IiMwMDgxOEYiIHJ4PSI0Ii8+PHRleHQgeD0iMjAiIHk9IjM4IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSJ3aGl0ZSI+SlBSIFJPT0ZJTkc8L3RleHQ+PHRleHQgeD0iMjAiIHk9IjUzIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIj5TT0xVVElPTlMgTFREPC90ZXh0Pjwvc3ZnPg==';
+            };
+        });
+    });
+    </script>
+    
+    <style>
+    /* New dark footer styling */
+    .new-footer {
+        background-color: #2b3a42;
+        color: #ffffff;
+        padding: 60px 0 20px;
+    }
+    
+    .new-footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+    
+    @media (max-width: 992px) {
+        .new-footer-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .new-footer-container {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+    }
+    
+    .new-footer-logo {
+        margin-bottom: 20px;
+    }
+    
+    .new-footer-description {
+        color: #c5c5c5;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+    
+    .new-footer-social {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .new-footer-social a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: #3d4f59;
+        color: #ffffff;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+    }
+    
+    .new-footer-social a:hover {
+        background-color: #00818F;
+        transform: translateY(-3px);
+    }
+    
+    .new-footer h4 {
+        color: #ffffff;
+        font-size: 18px;
+        margin-bottom: 25px;
+        position: relative;
+        font-weight: 600;
+    }
+    
+    .new-footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .new-footer-links li {
+        margin-bottom: 12px;
+    }
+    
+    .new-footer-links a {
+        color: #c5c5c5;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: block;
+    }
+    
+    .new-footer-links a:hover {
+        color: #ffffff;
+        transform: translateX(5px);
+    }
+    
+    .footer-contact-info {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .footer-contact-info li {
+        display: flex;
+        margin-bottom: 20px;
+        color: #c5c5c5;
+    }
+    
+    .footer-contact-info i {
+        color: #e74c3c;
+        font-size: 16px;
+        margin-right: 15px;
+        margin-top: 4px;
+    }
+    
+    .footer-contact-info a {
+        color: #c5c5c5;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    
+    .footer-contact-info a:hover {
+        color: #ffffff;
+    }
+    
+    .new-footer-bottom {
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 40px;
+        padding-top: 20px;
+    }
+    
+    .new-footer-bottom p {
+        color: #949494;
+        font-size: 14px;
+    }
+
+    /* New contact form styling based on the screenshot */
+    .contact-section {
+        padding: 80px 0;
+        background-color: #ffffff;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    @media (max-width: 768px) {
+        .contact-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Contact info styling */
+    .contact-info-container {
+        background-color: #ffffff;
+        padding: 20px;
+    }
+
+    .contact-title {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    .contact-title:after {
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 3px;
+        background-color: #e74c3c;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .contact-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .contact-info-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 25px;
+    }
+
+    .contact-icon {
+        width: 36px;
+        height: 36px;
+        background-color: #00818F;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        flex-shrink: 0;
+    }
+
+    .contact-icon i {
+        color: #ffffff;
+        font-size: 16px;
+    }
+
+    .contact-text h4 {
+        margin: 0 0 5px 0;
+        color: #00818F;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .contact-text p {
+        margin: 0;
+        color: #555;
+        line-height: 1.5;
+    }
+
+    .contact-text a {
+        color: #555;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .contact-text a:hover {
+        color: #00818F;
+    }
+
+    .map-container {
+        margin-top: 20px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    /* Form container styling */
+    .contact-form-container.dark-theme {
+        background-color: #222;
+        padding: 30px;
+        border-radius: 8px;
+    }
+
+    .form-title {
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 24px;
+    }
+
+    /* Form styling */
+    .contact-form .form-group {
+        margin-bottom: 20px;
+    }
+
+    .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 12px 15px;
+        background-color: #333;
+        border: none;
+        border-radius: 4px;
+        font-size: 15px;
+        color: #ffffff;
+    }
+
+    .form-control::placeholder {
+        color: #999;
+    }
+
+    .form-control:focus {
+        outline: none;
+        background-color: #3a3a3a;
+    }
+
+    /* Select styling */
+    select.form-control {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23999' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: calc(100% - 15px) center;
+        padding-right: 35px;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+
+    /* Textarea styling */
+    textarea.form-control {
+        resize: vertical;
+        min-height: 120px;
+    }
+
+    /* File upload styling */
+    .file-upload {
+        margin-bottom: 20px;
+    }
+
+    .file-upload input[type="file"] {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+
+    .upload-btn {
+        display: block;
+        width: 100%;
+        padding: 12px 15px;
+        background-color: transparent;
+        border: 1px dashed #555;
+        border-radius: 4px;
+        color: #00b8d4;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .upload-btn:hover {
+        border-color: #00b8d4;
+        background-color: rgba(0, 184, 212, 0.05);
+    }
+
+    .upload-btn i {
+        margin-right: 8px;
+    }
+
+    /* Send button styling */
+    .send-btn {
+        display: block;
+        width: 100%;
+        padding: 12px 15px;
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-weight: 600;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-transform: uppercase;
+    }
+
+    .send-btn:hover {
+        background-color: #c0392b;
+    }
+
+    /* WhatsApp button styling */
+    .whatsapp-container {
+        margin-top: 20px;
+    }
+
+    .whatsapp-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 12px 15px;
+        background-color: #25D366;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+        background-color: #128C7E;
+    }
+
+    .whatsapp-btn i {
+        margin-right: 8px;
+        font-size: 18px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .contact-section {
+            padding: 50px 0;
+        }
+        
+        .contact-form-container.dark-theme,
+        .contact-info-container {
+            padding: 20px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo-white.png" alt="JPR Roofing Solutions Ltd" width="200">
+                </a>
+            </div>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="index.html#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="index.html#reviews" class="nav-link">Reviews</a></li>
+                    <li class="nav-item"><a href="index.html#about" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="phone-number">
+                <i class="fas fa-phone"></i>
+                <a href="tel:02031142105">020 3114 2105</a>
+            </div>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <div class="mobile-nav-header">
+            <div class="mobile-logo">
+                <img src="images/logo-white.png" alt="JPR Roofing Solutions Ltd" width="180">
+            </div>
+            <div class="close-menu">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="index.html#services" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="index.html#projects" class="nav-link">Projects</a></li>
+            <li class="nav-item"><a href="index.html#reviews" class="nav-link">Reviews</a></li>
+            <li class="nav-item"><a href="index.html#about" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+        <div class="mobile-nav-footer">
+            <div class="phone-number">
+                <i class="fas fa-phone"></i>
+                <a href="tel:02031142105">020 3114 2105</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch for a free quote or to discuss your roofing needs</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info-container">
+                    <h2 class="contact-title">Contact Us</h2>
+                    <ul class="contact-list">
+                        <li class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Our Address</h4>
+                                <p>Churchill House Serviced Offices<br>120 Bunn's Lane, London<br>NW7 2AS, United Kingdom</p>
+                            </div>
+                        </li>
+                        <li class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p><a href="tel:02031142105">020 3114 2105</a></p>
+                            </div>
+                        </li>
+                        <li class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p><a href="mailto:jprroofingsolutions@gmail.com">jprroofingsolutions@gmail.com</a></p>
+                            </div>
+                        </li>
+                        <li class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Business Hours</h4>
+                                <p>Monday - Friday: 8:00 AM - 6:00 PM<br>
+                                Saturday: 9:00 AM - 4:00 PM<br>
+                                Sunday: Closed</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2479.954!2d-0.232!3d51.615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876190c7bfa2aeb%3A0x6bac8ec0a9dce0a!2sChurchill%20House%2C%20120%20Bunn&#39;s%20Ln%2C%20London%20NW7%202AS!5e0!3m2!1sen!2suk!4v1616699083402!5m2!1sen!2suk" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container dark-theme">
+                    <h2 class="form-title">Get a Free Quote</h2>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label visually-hidden">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label visually-hidden">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="form-label visually-hidden">Phone</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="Phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address" class="form-label visually-hidden">Address</label>
+                            <input type="text" id="address" name="address" class="form-control" placeholder="Address" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service" class="form-label visually-hidden">Service Required</label>
+                            <select id="service" name="service" class="form-control" required>
+                                <option value="" disabled selected>Select a service</option>
+                                <option value="Roof Repair">Roof Repair</option>
+                                <option value="Roof Installation">Roof Installation</option>
+                                <option value="Roof Replacement">Roof Replacement</option>
+                                <option value="Flat Roof">Flat Roof</option>
+                                <option value="Emergency Repair">Emergency Repair</option>
+                                <option value="Inspection">Roof Inspection</option>
+                                <option value="Other">Other (specify in message)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label visually-hidden">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Message" required></textarea>
+                        </div>
+                        
+                        <div class="form-group file-upload">
+                            <label for="roof-photos" class="upload-btn" id="upload-btn" role="button" tabindex="0">
+                                <i class="fas fa-cloud-upload-alt"></i> Upload Photos of Your Roof
+                            </label>
+                            <input type="file" id="roof-photos" name="roof-photos" accept="image/*" multiple>
+                        </div>
+                        
+                        <button type="submit" class="send-btn" id="send-btn">
+                            Send
+                        </button>
+                    </form>
+                    
+                    <div class="whatsapp-container">
+                        <a href="https://wa.me/447443674450?text=Hi%20JPR%20Roofing%20Solutions%2C%20I%20need%20help%20with..." class="whatsapp-btn" role="button" tabindex="0">
+                            <i class="fab fa-whatsapp"></i> MESSAGE ON WHATSAPP
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="new-footer">
+        <div class="new-footer-container">
+            <!-- Company Info Column -->
+            <div>
+                <div class="new-footer-logo">
+                    <img src="images/logo-white.png" alt="JPR Roofing Solutions Ltd" width="180">
+                </div>
+                <p class="new-footer-description">Expert roofing services for homes and businesses across London and surrounding areas. Quality workmanship guaranteed.</p>
+                <div class="new-footer-social">
+                    <a href="https://www.facebook.com/208359349339052" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/jprroofingsolutionsltd?igsh=MWJqejdhNWl4NHp1aQ==" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+            <!-- Quick Links Column -->
+            <div>
+                <h4>Quick Links</h4>
+                <ul class="new-footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#reviews">Reviews</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <!-- Services Column -->
+            <div>
+                <h4>Services</h4>
+                <ul class="new-footer-links">
+                    <li><a href="index.html#services">Roof Repairs</a></li>
+                    <li><a href="index.html#services">Roof Installations</a></li>
+                    <li><a href="index.html#services">Roof Replacements</a></li>
+                    <li><a href="index.html#services">Flat Roofs</a></li>
+                    <li><a href="index.html#services">Guttering</a></li>
+                    <li><a href="index.html#services">Chimney Work</a></li>
+                </ul>
+            </div>
+            
+            <!-- Contact Info Column -->
+            <div>
+                <h4>Contact Info</h4>
+                <ul class="footer-contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Churchill House Serviced Offices<br>120 Bunn's Lane, London<br>NW7 2AS, United Kingdom</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span><a href="tel:02031142105">020 3114 2105</a></span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span><a href="mailto:jprroofingsolutions@gmail.com">jprroofingsolutions@gmail.com</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="new-footer-bottom">
+                <p>Copyright © 2025 JPR Roofing Solutions Ltd - All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/link-fix.js"></script>
+    <script src="js/absolute-fix.js"></script>
+    <script src="js/logo.js"></script>
+</body>
+</html>

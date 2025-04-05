@@ -1,0 +1,99 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPR Roofing Solutions Ltd - Expert Roofing Services</title>
+    <meta name="description" content="JPR Roofing Solutions Ltd offers top-notch roofing services including repairs, installations, and replacements. With 12+ years of experience and 5-star ratings, we provide quality workmanship for homes and businesses.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/sponsorship.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Smooth scroll script -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Smooth scroll function
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (!targetElement) return;
+                
+                const headerHeight = document.querySelector('.header')?.offsetHeight || 80;
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - headerHeight,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    });
+    </script>
+    
+    <!-- Debug Script for Logo -->
+    <script>
+    window.addEventListener('DOMContentLoaded', function() {
+        // Debug the main logo
+        const mainLogo = document.querySelector('.logo img');
+        if (mainLogo) {
+            console.log('Main logo found in DOM');
+            mainLogo.onload = function() { 
+                console.log('Main logo loaded successfully'); 
+            };
+            mainLogo.onerror = function() { 
+                console.error('Error loading main logo', mainLogo.src);
+                // Try a fallback direct URL
+                console.log('Attempting fallback...');
+                mainLogo.src = 'https://cryptoshrine.github.io/jpr-website/images/logo-white.png';
+            };
+        } else {
+            console.error('Main logo element not found');
+        }
+        
+        // Debug the mobile logo
+        const mobileLogo = document.querySelector('.mobile-logo img');
+        if (mobileLogo) {
+            console.log('Mobile logo found in DOM');
+            mobileLogo.onload = function() { 
+                console.log('Mobile logo loaded successfully'); 
+            };
+            mobileLogo.onerror = function() { 
+                console.error('Error loading mobile logo', mobileLogo.src);
+                // Try a fallback direct URL 
+                mobileLogo.src = 'https://cryptoshrine.github.io/jpr-website/images/logo-white.png';
+            };
+        } else {
+            console.error('Mobile logo element not found');
+        }
+        
+        // Check if the logo images exist with HEAD request
+        const checkImage = function(url) {
+            fetch(url, { method: 'HEAD' })
+            .then(response => {
+                console.log(`Image at ${url} status: ${response.status}`);
+            })
+            .catch(error => {
+                console.error(`Failed to check ${url}:`, error);
+            });
+        }
+        
+        checkImage('https://raw.githubusercontent.com/cryptoshrine/jpr-website/main/images/logo-white.png');
+        checkImage('https://cryptoshrine.github.io/jpr-website/images/logo-white.png');
+        checkImage('images/logo-white.png');
+    });
+    </script>
+</head>

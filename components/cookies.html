@@ -1,0 +1,35 @@
+<!-- Cookies Notification -->
+<div class="cookies-notification">
+    <div class="cookies-content">
+        <div class="cookies-text">
+            We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. Learn more in our <a href="/privacy-policy">Privacy Policy</a>.
+        </div>
+        <div class="cookies-buttons">
+            <button class="cookie-button accept-cookies" onclick="acceptCookies()">Accept All</button>
+            <button class="cookie-button reject-cookies" onclick="rejectCookies()">Reject All</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Check if user has already made a cookie choice
+    window.addEventListener('load', function() {
+        if (!localStorage.getItem('cookieChoice')) {
+            setTimeout(function() {
+                document.querySelector('.cookies-notification').classList.add('show');
+            }, 1000);
+        }
+    });
+
+    function acceptCookies() {
+        localStorage.setItem('cookieChoice', 'accepted');
+        document.querySelector('.cookies-notification').classList.remove('show');
+        // Add your cookie acceptance logic here
+    }
+
+    function rejectCookies() {
+        localStorage.setItem('cookieChoice', 'rejected');
+        document.querySelector('.cookies-notification').classList.remove('show');
+        // Add your cookie rejection logic here
+    }
+</script>
